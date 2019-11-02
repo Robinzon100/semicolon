@@ -24,6 +24,10 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 app.use(volleyball);
 
 
+app.use("/login",(req, res, next) => {
+    res.render("auth/login.ejs");
+});
+
 //
 // ─── ROUTES ─────────────────────────────────────────────────────────────────────
 //

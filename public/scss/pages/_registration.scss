@@ -42,7 +42,7 @@
     .register-btn {
         text-decoration: none;
         border-radius: 2px;
-        width: 34rem;
+        width: 33.1rem;
         padding: 2rem;
         color: white;
         font-family: "lato-regular";
@@ -79,10 +79,10 @@
         border:2px solid #2980B9;
         padding:1rem;
         font-size:25px;
-        border-radius:10px;
-        border:none;
+        border-radius:5px;
+        border:1px solid rgba(170, 170, 170, 0.3);
         box-shadow:$box-shadow-btn;
-
+        
         
     }
 
