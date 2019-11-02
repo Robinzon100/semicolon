@@ -35,15 +35,18 @@ app.use(
 // ─── ROUTES ─────────────────────────────────────────────────────────────────────
 //
 const authRoutes = require("./routes/auth");
+const clientRoutes = require("./routes/client");
 
 // ─── USING THE ROUTES ───────────────────────────────────────────────────────────
 app.use("/auth", authRoutes);
+app.use(clientRoutes);
 
-query.authStateChange();
+app.use("/", async (req, res, next) => {
+  //   req.session.user = user;
+  console.log(req.session, "sdnasdnasdnasdnaso");
 
-app.use("/", (req, res, next) => {
   res.render("index.ejs");
-  console.log(req.session);
+  //   console.log(req.session);
 });
 
 app.use((req, res, next) => {

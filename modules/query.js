@@ -28,22 +28,21 @@ exports.signIn = async (email, password) => {
   }
 };
 
+// exports.authStateChange = async () => {
+//   firebase.FirebaseAuth.onAuthStateChanged(res => {
+//     return res;
+//   });
+// };
+
 exports.signOut = async () => {
   // const res = await
   firebase.FirebaseAuth.signOut()
     .then(function() {
-      console.log("signed out ");
+      console.log("signed out");
       // Sign-out successful.
-      localStorage.clear();
     })
     .catch(function(error) {
       console.log("sign out error ", error);
       // An error happened.
     });
-};
-
-exports.authStateChange = async () => {
-  await firebase.FirebaseAuth.onAuthStateChanged(res => {
-    localStorage.setItem("user", JSON.stringify(res));
-  });
 };
