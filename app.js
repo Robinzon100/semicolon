@@ -31,9 +31,15 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 
 app.use(volleyball);
 
+
+ 
+app.use("/user",(req, res, next) => {
+    res.render("profile.ejs");
+});
+
  
 app.use((req, res, next) => {
-    res.status(404).send("<h1>404 - Not Found!</h1>");
+    res.render("index.ejs");
 });
 
 // const server = http2.createSecureServer({cert, key});
