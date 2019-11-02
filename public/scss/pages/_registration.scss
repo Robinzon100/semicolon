@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(141.47deg, #FC6719 4.12%, rgba(252, 103, 25, 0.85) 97.91%);
+    background: $gradiand;
 
     &--text{
         &--semicolon {
@@ -26,9 +26,6 @@
     display: flex;
     justify-content: center;
 
-
-    
-    
 }
 
 
@@ -89,8 +86,9 @@
     
     ::placeholder {
         color: #9C9A9A;
-        font-size: 16px;  
-        font-family: "gilroy";   
+        font-size: 12px;  
+        font-family: "lato-regular";  
+        text-align: center;
     }
 
     
