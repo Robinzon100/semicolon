@@ -9,4 +9,7 @@ const client = require("../controllers/client");
 router.get("/", client.getIndex);
 
 
+router.post("/utils", client.getUtils);
+
+
 module.exports = router;

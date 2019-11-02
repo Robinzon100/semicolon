@@ -1,10 +1,17 @@
 <%- include("includes/head.ejs") %>
- 
-<h1>user id is <%= userId %></h1>
+  
+<form action="/utils" method="post">
+    <select name="typeOfUtil">
+        <option value="gas">gas</option>
+        <option value="electricity">electricity</option>
+        <option value="water">water</option>
+        <option value="internet">internet</option>
+      </select>
+    
+    <input type="datetime" name="startDate" id=""><br>
+    <input type="datetime" name="endDate" id=""><br>
+    <button type="submit">send</button>
+</form>
 
-<input id="utilityName" type="text">
-<input id="utilityPrice" type="text">
-<button id="inputBtn">press</button>
 
-
-<%- include("includes/bottom.ejs") %>
+<%- include("includes/bottom.ejs") %> 

@@ -31,7 +31,7 @@ app.use(
   })
 );
 
-//
+// 
 // ─── ROUTES ─────────────────────────────────────────────────────────────────────
 //
 const authRoutes = require("./routes/auth");
@@ -56,4 +56,4 @@ app.use((req, res, next) => {
 // const server = http2.createSecureServer({cert, key});
 
 // server.listen(8443);
-app.listen(3000);
+app.listen(5000);
