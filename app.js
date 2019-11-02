@@ -46,10 +46,7 @@ app.use((req, res, next) => {
 app.use("/", (req, res, next) => {
   query.onAuthStateChanged();
 
-  res.render(
-    "index.ejs"
-    //    { loggedIn: req.body.isLoggedin }
-  );
+  res.render("index.ejs");
 });
 
 // const server = http2.createSecureServer({cert, key});
