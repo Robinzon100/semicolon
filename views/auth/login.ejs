@@ -2,14 +2,13 @@
 <h1>login</h1>
 
 <form action="/auth/login" method="post">
-    <div class="login">
-        <div class="login__container">
-            <input type="text">
-            <input type="text">
-            <button type="submit">login</button>
-        </div>
+  <div class="login">
+    <div class="login__container">
+      <input type="text" name="email" />
+      <input type="password" name="password" />
+      <button type="submit">login</button>
     </div>
+  </div>
 </form>
-
 
 <%- include("../includes/bottom.ejs") %>
