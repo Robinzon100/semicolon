@@ -6,8 +6,10 @@ exports.getRegister = (req, res, next) => {
 
 exports.postRegister = (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email, password);
+
   query.signUp(email, password);
+  req.session.email = email;
+  // console.log(req.session.logedIn)
 
   res.redirect("/");
 };
@@ -18,9 +20,11 @@ exports.getLogin = (req, res, next) => {
 
 exports.postLogin = async (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email, password);
+  // console.log(email, password);
   signin = await query.signIn(email, password);
-  //   console.log(signin, "sign in item");
+  // console.log(signin, "sign in item");
+
+  req.session.logedIn = true;
 
   res.redirect("/");
 };

@@ -7,6 +7,8 @@ const volleyball = require("volleyball");
 const nodemon = require("nodemon");
 const query = require("./modules/query");
 
+const session = require("express-session");
+
 require("dotenv").config();
 
 // ─── VIEW ENGINE ────────────────────────────────────────────────────────────────
@@ -21,6 +23,14 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 
 app.use(volleyball);
 
+app.use(
+  session({
+    secret: "yourSecret",
+    resave: false,
+    saveUninitialized: false
+  })
+);
+
 //
 // ─── ROUTES ─────────────────────────────────────────────────────────────────────
 //
@@ -30,6 +40,11 @@ const authRoutes = require("./routes/auth");
 app.use("/auth", authRoutes);
 
 query.authStateChange();
+
+app.use("/", (req, res, next) => {
+  res.render("index.ejs");
+  console.log(req.session);
+});
 
 app.use((req, res, next) => {
   res.render("index.ejs");
