@@ -9,5 +9,18 @@ exports.postRegister = (req, res, next) => {
   console.log(email, password);
   query.signUp(email, password);
 
-  res.redirect("/auth/register");
+  res.redirect("/");
+};
+
+exports.getLogin = (req, res, next) => {
+  res.render("auth/login.ejs");
+};
+
+exports.postLogin = async (req, res, next) => {
+  const { email, password } = req.body;
+  console.log(email, password);
+  signin = await query.signIn(email, password);
+  console.log(signin, "sign in item");
+
+  res.redirect("/");
 };

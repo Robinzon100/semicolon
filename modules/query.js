@@ -14,3 +14,16 @@ exports.signUp = async (email, password) => {
     return { user: null, error: error };
   }
 };
+
+exports.signIn = async (email, password) => {
+  try {
+    const res = await firebase.FirebaseAuth.signInWithEmailAndPassword(
+      email,
+      password
+    );
+
+    return { user: res.user, error: null };
+  } catch (error) {
+    return { user: null, error: error };
+  }
+};
