@@ -1,13 +1,36 @@
 <%- include("../includes/head.ejs") %>
 
-<form action="/auth/register" method="post">
-  <div class="login">
-    <div class="login__container">
-      <input type="text" name="email" />
-      <input type="password" name="password" />
-      <button type="submit">login</button>
+<div class="registration">
+  <div class="left-panel">
+    <div class="registration-form">
+        <div class="account">Creat account</div>
+
+
+
+        <form class="form" action="/auth/register" method="post">
+          <div >
+            <input class="form--name" type="text" placeholder="Name">
+          </div>
+          <div >
+              <input type="email" class="input" placeholder="Email">
+            </div>
+            <div >
+                <input type="password" class="input" placeholder="Password">
+              </div>
+        </form>
+
+        <a href="#" class="register-btn">register</a>
     </div>
+
+   
+    
+
   </div>
-</form>
+  <div class="right-panel">
+      <div class="right-panel--text">
+          <p class="right-panel--text--semicolon">Semicolon;</p>
+      </div>
+  </div>
+</div>
 
 <%- include("../includes/bottom.ejs") %>
