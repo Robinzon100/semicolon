@@ -1,4 +1,5 @@
 const query = require("../modules/query");
+const session = require("express-session");
 
 exports.getRegister = (req, res, next) => {
   res.render("auth/registration.ejs");
@@ -6,8 +7,8 @@ exports.getRegister = (req, res, next) => {
 
 exports.postRegister = (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email, password);
+
   query.signUp(email, password);
 
-  res.redirect("/auth/register");
+  res.redirect("/");
 };

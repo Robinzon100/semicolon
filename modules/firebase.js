@@ -19,4 +19,4 @@ const FirebaseAuth = firebase.auth();
 
 const Firestore = firebase.firestore();
 
-module.exports = { FirebaseAuth, Firestore, firebase };
+module.exports = { FirebaseAuth, Firestore, firebase, config };

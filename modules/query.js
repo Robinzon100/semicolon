@@ -6,9 +6,10 @@ exports.signUp = async (email, password) => {
       email,
       password
     );
-    if (res) {
-      console.log(res.user.Q.uid);
-    }
+    // if (res) {
+    //   console.log(res.user.Q.uid);
+    // }
+
     return { user: res.user, error: null };
   } catch (error) {
     return { user: null, error: error };
