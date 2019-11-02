@@ -31,3 +31,19 @@ exports.postLogin = async (req, res, next) => {
 
   res.redirect("/");
 };
+
+
+
+
+
+
+exports.postLogout = (req, res, next) => {
+  
+  req.session.destroy();
+
+  console.log(req.session);
+  
+
+
+  res.redirect("/");
+};
