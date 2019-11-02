@@ -38,12 +38,14 @@ const authRoutes = require("./routes/auth");
 
 // ─── USING THE ROUTES ───────────────────────────────────────────────────────────
 app.use("/auth", authRoutes);
+// query.authStateChange();
 
-query.authStateChange();
+app.use("/", async (req, res, next) => {
+  //   req.session.user = user;
+  console.log(req.session, "sdnasdnasdnasdnaso");
 
-app.use("/", (req, res, next) => {
   res.render("index.ejs");
-  console.log(req.session);
+  //   console.log(req.session);
 });
 
 app.use((req, res, next) => {
