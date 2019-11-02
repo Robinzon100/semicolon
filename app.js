@@ -5,15 +5,15 @@ const bodyParser = require("body-parser");
 const app = express();
 const volleyball = require("volleyball");
 const nodemon = require('nodemon');
+
+require("dotenv").config();
+
+
 // const session = require("express-session");
 // const MongoDBStore = require("connect-mongodb-session")(session);
 // const flash = require("connect-flash");
 // const multer = require("multer");
 // const compression = require('compression');
-require("dotenv").config();
-
-
-
  
 // ─── VIEW ENGINE ────────────────────────────────────────────────────────────────
 app.set("view engine", "ejs");
