@@ -8,12 +8,6 @@ const nodemon = require('nodemon');
 
 require("dotenv").config();
 
-
-// const session = require("express-session");
-// const MongoDBStore = require("connect-mongodb-session")(session);
-// const flash = require("connect-flash");
-// const multer = require("multer");
-// const compression = require('compression');
  
 // ─── VIEW ENGINE ────────────────────────────────────────────────────────────────
 app.set("view engine", "ejs");
@@ -27,15 +21,19 @@ app.use(bodyParser.json({ type: "application/*+json" }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/images", express.static(path.join(__dirname, "images")));
 
- 
-
 app.use(volleyball);
 
 
- 
-app.use("/user",(req, res, next) => {
-    res.render("profile.ejs");
-});
+//
+// ─── ROUTES ─────────────────────────────────────────────────────────────────────
+//
+const authRoutes = require("./routes/auth");
+
+// ─── USING THE ROUTES ───────────────────────────────────────────────────────────
+app.use("/auth", authRoutes);
+
+
+
 
  
 app.use((req, res, next) => {
