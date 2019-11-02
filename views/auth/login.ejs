@@ -1,4 +1,5 @@
 <%- include("../includes/head.ejs") %>
+<<<<<<< HEAD
 <h1>login</h1>
 
 <form action="/auth/login" method="post">
@@ -12,3 +13,39 @@
 </form>
 
 <%- include("../includes/bottom.ejs") %>
+=======
+
+
+<div class="mainRegistration">
+
+        <div class="leftPanel">
+        <div class="loginHeader">
+          <h1>Login</h1>
+        </div>
+        <form class="loginForm" action="/auth/register" method="post">
+          <div class="login">
+            <div class="loginContainer">
+              <div class="username">
+                <input type="text" name="Username" class="usernameField" placeholder="Username"/>
+              </div>
+              <div class="password">
+                <input type="password" name="Password" class="passwordField" placeholder="Password"/>
+              </div>
+              <div class="loginButton">
+                <button class="login">Login</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      
+      <div class="rightPanel">
+        <div class="semicolon">
+            <h2>Semicolon;</h2>
+        </div>
+      </div>
+      
+      </div>
+
+<%- include("../includes/bottom.ejs") %>
+>>>>>>> d6d534cc323dbc4545db9e200137c2d2eb0642c8

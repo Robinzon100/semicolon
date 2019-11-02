@@ -1,0 +1,43 @@
+.mainRegistration {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid black;  
+}
+.leftPanel {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.rightPanel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: chocolate;
+    font-size: 60px;
+    color: white;
+}
+.loginHeader {
+    display: flex;
+    justify-content: center;
+}
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+input {
+    width: 200px;
+    height: 50px;
+    padding: 12px;
+}
+button {
+    
+}
