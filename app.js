@@ -4,25 +4,22 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const volleyball = require("volleyball");
-const nodemon = require('nodemon');
+const nodemon = require("nodemon");
+const query = require("./modules/query");
 
 require("dotenv").config();
 
- 
 // ─── VIEW ENGINE ────────────────────────────────────────────────────────────────
 app.set("view engine", "ejs");
 app.set("views", "views");
 
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json({ type: "application/*+json" }));
 
- 
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/images", express.static(path.join(__dirname, "images")));
 
 app.use(volleyball);
-
 
 //
 // ─── ROUTES ─────────────────────────────────────────────────────────────────────
@@ -32,12 +29,10 @@ const authRoutes = require("./routes/auth");
 // ─── USING THE ROUTES ───────────────────────────────────────────────────────────
 app.use("/auth", authRoutes);
 
+query.authStateChange();
 
-
-
- 
 app.use((req, res, next) => {
-    res.render("index.ejs");
+  res.render("index.ejs");
 });
 
 // const server = http2.createSecureServer({cert, key});

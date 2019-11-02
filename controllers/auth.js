@@ -20,7 +20,7 @@ exports.postLogin = async (req, res, next) => {
   const { email, password } = req.body;
   console.log(email, password);
   signin = await query.signIn(email, password);
-  console.log(signin, "sign in item");
+  //   console.log(signin, "sign in item");
 
   res.redirect("/");
 };
