@@ -18,7 +18,7 @@ exports.getUtils = (req, res, next) => {
       banking: {
         endDate: endDate,
         startDate: startDate,
-        loan: loan,
+        // loan: loan,
     }
   });
 
@@ -87,6 +87,6 @@ exports.getLoans = (req, res, next )=>{
 }
 
 exports.getLeases = (req, res, next )=>{
-  res.render('loans.ejs');
+  res.render('lease.ejs');
 
 }

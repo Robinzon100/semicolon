@@ -13,7 +13,7 @@ setInterval(function(){
 
     let startDate = bankingUtil.startDate;
     let endDate = bankingUtil.endDate;
-    let loan = bankingUtil.loan;
+    // let loan = bankingUtil.loan;
 
     console.log(startDate, endDate);
 
