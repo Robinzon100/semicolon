@@ -13,3 +13,8 @@
 }
 
 
+.biggest-font-size{
+    font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1900 - 700))) !important;
+}
+
+

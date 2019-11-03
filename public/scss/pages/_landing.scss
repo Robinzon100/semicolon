@@ -4,8 +4,8 @@
 
 .back-pic {
     width: 100%;
-    height: 100vh;
-    margin-top: 8vh;
+    // height: 100vh;
+    margin-top: 8vh 0;
     background-image: url("../../pictures/BG.png");
     background-size: contain;
     // background-position: center;
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 4rem;
     
 }
 
@@ -208,3 +209,18 @@
     
     
 }
+
+
+
+
+
+/* main.css | http://localhost:7000/css/main.css */
+
+@media screen and (max-width: 800px) {
+    .form {
+      width:20rem;
+    }
+  }
+  
+  
+  
