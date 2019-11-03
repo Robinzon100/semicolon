@@ -57,8 +57,8 @@ app.use((req, res, next) => {
 })
 
 
-app.use("/login",(req, res, next) => {
-    res.render("auth/login.ejs");
+app.use("/loans",(req, res, next) => {
+    res.render("loans.ejs");
 });
 
 //
@@ -86,4 +86,4 @@ app.use((req, res, next) => {
 // const server = http2.createSecureServer({cert, key});
 
 // server.listen(8443);
-app.listen(3000);
+app.listen(5000);

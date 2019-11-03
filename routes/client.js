@@ -15,5 +15,8 @@ router.post("/utils", client.getUtils);
 
 router.get("/utils", client.getAllUtils);
 
+router.get("/loans", client.getLoans);
+router.get("/leases", client.getLeases);
+
 
 module.exports = router;

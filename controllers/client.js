@@ -75,3 +75,18 @@ exports.getAllUtils = (req, res, next )=>{
   
 
 }
+
+
+
+
+
+exports.getLoans = (req, res, next )=>{
+  res.render('loans.ejs');
+  
+
+}
+
+exports.getLeases = (req, res, next )=>{
+  res.render('loans.ejs');
+
+}
