@@ -1,4 +1,5 @@
 <%- include("includes/head.ejs") %>
+<<<<<<< HEAD
 <input id="userId" type="hidden" value="<%=userId%>" />
 <h1>user id is <%=userId%>></h1>
 
@@ -7,3 +8,21 @@
 <button id="inputBtn">press</button>
 
 <%- include("includes/bottom.ejs") %>
+=======
+  
+<form action="/utils" method="post">
+    <select name="typeOfUtil">
+        <option value="gas">gas</option>
+        <option value="electricity">electricity</option>
+        <option value="water">water</option>
+        <option value="internet">internet</option>
+      </select>
+    
+    <input type="datetime" name="startDate" id=""><br>
+    <input type="datetime" name="endDate" id=""><br>
+    <button type="submit">send</button>
+</form>
+
+
+<%- include("includes/bottom.ejs") %> 
+>>>>>>> 568206dd43370a7c6201d96b48dcabf5fe388f8f
