@@ -12,4 +12,8 @@ router.get("/", client.getIndex);
 router.post("/utils", client.getUtils);
 
 
+
+router.get("/utils", client.getAllUtils);
+
+
 module.exports = router;

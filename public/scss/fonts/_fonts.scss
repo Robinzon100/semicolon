@@ -1,0 +1,15 @@
+.big-font-size{
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1900 - 700))) !important;
+}
+
+.medium-font-size{
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 700))) !important;
+}
+
+
+
+.small-font-size{
+    font-size: calc(8px + (14 - 8) * ((100vw - 300px) / (1900 - 700))) !important;
+}
+
+

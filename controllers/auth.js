@@ -16,6 +16,7 @@ exports.postRegister = async (req, res, next) => {
     userId = res.uid;
   });
 
+  
   let docRef = firebase.Firestore.collection("sessions").doc("user");
 
   docRef.set({

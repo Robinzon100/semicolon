@@ -10,7 +10,7 @@ exports.getIndex = (req, res, next) => {
 exports.getUtils = (req, res, next) => {
   const { typeOfUtil, startDate, endDate } = req.body;
 
-  let docRef = firebase.Firestore.collection("users").doc(req.session.user);
+  let docRef = firebase.Firestore.collection("users").doc("ZqkPLXc8E7VKrdCriVgB9cQEigt1");
 
   docRef.set({
     utils: {
@@ -21,15 +21,24 @@ exports.getUtils = (req, res, next) => {
     }
   });
 
+
+  console.log(startDate, endDate)
+
   //   console.log(firebase);
 
-  res.redirect("/");
+  // res.redirect("/");
 
-  docRef.set({
-    first: "Ada",
-    last: "Lovelace",
-    born: 1815
-  });
+  // docRef.set({
+  //   first: "Ada",
+  //   last: "Lovelace",
+  //   born: 1815
+  // });
 
   res.redirect("/");
 };
+
+
+
+exports.getAllUtils = (req, res, next )=>{
+
+}

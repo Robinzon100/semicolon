@@ -1,0 +1,160 @@
+
+/// IN GOOD CONDITION
+
+
+/// ======= WIFI
+
+
+
+
+.wifi-small{
+    animation-name: wife-small;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    cursor: pointer;
+
+}
+
+@keyframes wife-small {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+
+
+.wifi-medium{
+    animation-name: wife-medium;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    cursor: pointer;
+
+}
+
+@keyframes wife-medium {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+
+
+.wifi-big{
+    animation-name:wife-big;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 10s;
+    cursor: pointer;
+
+    
+}
+
+@keyframes wife-big {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+// .wifi-small{}
+
+// .wifi-medium{}
+
+
+
+/// === === === SMOKE
+
+
+.smoke{
+    animation-name: smoke-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    transform: translateY(30%);
+    cursor: pointer;
+
+}
+
+
+@keyframes smoke-animation {
+    0%   { transform: translateY(30%)}
+    25%  {transform: translateY(-20%);transform: scale(1)}
+    
+    50%  { transform: translateY(-40%)}
+    75%  { transform: translateY(60%)}
+    76%  { transform: translateY(30%)}
+    100% { transform: translateY(30%)}
+}
+.fill {
+    fill:#ffc300 !important;
+}
+
+
+
+
+/// IN medium CONDITION
+
+.electro,.wvrili,.marjvena,.marcxena{
+    animation-name: electro-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    // animation-delay: 1s;
+    cursor: pointer;
+
+    
+}
+
+
+@keyframes electro-animation {
+    0%   { opacity: 100;}
+    
+    50%  { opacity: 0;}
+    
+    100% { opacity: 100;}
+}
+
+
+.wifi-small{
+    animation-name: wife-small;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    // animation-delay: 1s;
+    cursor: pointer;
+
+
+}
+
+@keyframes wife-small {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+
+
+.wifi-medium{
+    animation-name: wife-medium;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    cursor: pointer;
+
+
+}
+
+@keyframes wife-medium {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+

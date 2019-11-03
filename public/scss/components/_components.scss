@@ -1,0 +1,47 @@
+.input{
+    display:block;
+    width:100%;
+    border:2px solid #2980B9;
+    padding:1rem;
+    font-size:30px;
+    border-radius:5px;
+    border:1px solid rgba(170, 170, 170, 0.3);
+    box-shadow: $box-shadow-btn;
+}
+
+
+.btn {
+    text-decoration: none;
+        border-radius: 2px;
+        width: 33.1rem;
+        padding: 2rem;
+        color: white;
+        font-family: "lato-regular";
+        display: block;
+        text-align: center;
+        position: relative;
+        background: $main-color;
+        font-size: calc(15px + (22 - 15) * ((100vw - 300px) / (1900 - 700))) !important;
+}
+
+
+    
+.green{
+    background-color: green !important;
+    width: 2% !important;
+}
+
+.red{
+    background-color: #c40093 !important;
+    width: 2% !important;
+}
+
+
+
+.white {
+    background-color: #f7f7f7!important;
+    
+}
+    
+
+

@@ -52,6 +52,10 @@ app.use((req, res, next) => {
 })
 
 
+app.use("/login",(req, res, next) => {
+    res.render("auth/login.ejs");
+});
+
 //
 // ─── ROUTES ─────────────────────────────────────────────────────────────────────
 //
