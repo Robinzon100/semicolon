@@ -1,4 +1,4 @@
-const firebase = ("../modules/firebase")
+const firebase = require("../modules/firebase")
 
 
 exports.getIndex = (req, res, next) => {
@@ -13,19 +13,22 @@ exports.getIndex = (req, res, next) => {
 exports.getUtils = (req, res, next) => {
     const { typeOfUtil, startDate, endDate } = req.body;
 
-    console.log(firebase);
-    
-
     let docRef = firebase.Firestore.collection('users').doc(req.session.user);
 
+ 
+
+
     docRef.set({
-        first: 'Ada',
-        last: 'Lovelace',
-        born: 1815
+        utils:{
+            [typeOfUtil]:{
+                endDate: endDate, 
+                startDate: startDate 
+            }
+        }
     });
 
 
-     res.redirect('/');
+res.redirect('/');
 
 
 }  
