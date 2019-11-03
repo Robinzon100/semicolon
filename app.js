@@ -18,6 +18,11 @@ const firebase = require('./modules/firebase');
 
 require("dotenv").config();
 
+app.use(express.json({
+  type: ['application/json', 'text/plain']
+}))
+
+
 // ─── VIEW ENGINE ────────────────────────────────────────────────────────────────
 app.set("view engine", "ejs");
 app.set("views", "views");
