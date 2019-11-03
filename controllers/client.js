@@ -1,4 +1,4 @@
-const Firestore = "../modules/firebase";
+const firebase = require("../modules/firebase");
 
 exports.getIndex = (req, res, next) => {
   console.log(req.session);
@@ -10,9 +10,20 @@ exports.getIndex = (req, res, next) => {
 exports.getUtils = (req, res, next) => {
   const { typeOfUtil, startDate, endDate } = req.body;
 
+  let docRef = firebase.Firestore.collection("users").doc(req.session.user);
+
+  docRef.set({
+    utils: {
+      [typeOfUtil]: {
+        endDate: endDate,
+        startDate: startDate
+      }
+    }
+  });
+
   //   console.log(firebase);
 
-  let docRef = Firestore.collection("users").doc(req.session.user);
+  res.redirect("/");
 
   docRef.set({
     first: "Ada",

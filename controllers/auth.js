@@ -5,10 +5,22 @@ exports.getRegister = (req, res, next) => {
   res.render("auth/registration.ejs");
 };
 
-exports.postRegister = (req, res, next) => {
+exports.postRegister = async (req, res, next) => {
   const { email, password } = req.body;
 
-  query.signUp(email, password);
+  let user = await query.signUp(email, password);
+  // let uid = user.uid;
+
+  let userId;
+  await firebase.FirebaseAuth.onAuthStateChanged(res => {
+    userId = res.uid;
+  });
+
+  let docRef = firebase.Firestore.collection("sessions").doc("user");
+
+  docRef.set({
+    Uid: userId
+  });
 
   // console.log(req.session.logedIn)
 
@@ -43,18 +55,10 @@ exports.postLogin = async (req, res, next) => {
   res.redirect("/");
 };
 
-
-
-
-
-
 exports.postLogout = (req, res, next) => {
-  
   req.session.destroy();
 
   console.log(req.session);
-  
-
 
   res.redirect("/");
 };

@@ -9,6 +9,13 @@ const query = require("./modules/query");
 
 const session = require("express-session");
 
+//
+// ─── OUN IMPORTS ────────────────────────────────────────────────────────────────
+//
+const firebase = require('./modules/firebase');
+
+
+
 require("dotenv").config();
 
 // ─── VIEW ENGINE ────────────────────────────────────────────────────────────────
@@ -31,7 +38,21 @@ app.use(
   })
 );
 
-// 
+
+app.use((req, res, next) => {
+  if (req.session.user == undefined) {
+    next();
+  } else {
+    const user = firebase.Firestore.collection('users').doc(req.session.user);
+    // const user = firebase.Firestore.collection('users').doc(req.session.user);
+
+    req.user = user;
+    next();
+  }
+})
+
+
+//
 // ─── ROUTES ─────────────────────────────────────────────────────────────────────
 //
 const authRoutes = require("./routes/auth");
@@ -56,4 +77,4 @@ app.use((req, res, next) => {
 // const server = http2.createSecureServer({cert, key});
 
 // server.listen(8443);
-app.listen(5000);
+app.listen(3000);
