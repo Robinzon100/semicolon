@@ -1,8 +1,71 @@
-.login-form {
+.registration {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.right-panel {
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $gradiand;
+
+    &--text{
+        &--semicolon {
+            font-size: 70px;
+            color:white;
+            font-family: "gilroy";
+        }
+    }
+
+    
+}
+
+.left-panel {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+
+    .register-btn {
+        text-decoration: none;
+        border-radius: 2px;
+        width: 33.1rem;
+        padding: 2rem;
+        color: white;
+        font-family: "lato-regular";
+        display: block;
+        text-align: center;
+        position: relative;
+        background: $main-color;
+        font-size: calc(15px + (22 - 15) * ((100vw - 300px) / (1900 - 700))) !important;
+        box-shadow:$box-shadow-btn;
+    }
+    
+}
+
+.account {
+    font-size: 40px;
+    color: #FC6719;
+    font-weight: bold;
+    font-family: "gilroy";
+}
+
+.form {
     // background-color: red;
     
     width: 60rem;
-    min-height: 250px;
+    min-height: 350px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -24,11 +87,31 @@
     
     ::placeholder {
         color: #9C9A9A;
-        font-size: 16px;  
-        font-family: "gilroy";
-        
+        font-size: 12px;  
+        font-family: "lato-regular";  
+        text-align: left;
     }
 
     
 
 }
+
+
+@media screen and (max-width: 800px) {
+    .right-panel {
+        display: none;
+    }
+    
+
+    .registration {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        height: 100vh;
+    }
+
+    .form{
+        width: 40rem;
+    }
+  }
