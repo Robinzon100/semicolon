@@ -59,3 +59,14 @@
 } 
 
 
+@media screen and (max-width: 600px) {
+
+    .header{
+        .menu--list{
+            width: 60rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}
