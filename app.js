@@ -24,8 +24,8 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 app.use(volleyball);
 
 
-app.use("/loans",(req, res, next) => {
-    res.render("loans.ejs");
+app.use("/",(req, res, next) => {
+    res.render("lease.ejs");
 });
 
 //
